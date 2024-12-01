@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulaire d'Expérience Utilisateur</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f8f9fa;
+      margin: 0;
+      padding: 0;
+      color: #495057;
+    }
+
+    .container {
+      width: 80%;
+      margin: auto;
+      padding-top: 50px;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    header h1 {
+      color: #e83e8c;
+      font-size: 36px;
+      animation: slideIn 1s ease-out;
+    }
+
+    header p {
+      font-size: 18px;
+      color: #6c757d;
+      margin-top: 10px;
+      line-height: 1.6;
+    }
+
+    .logo {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .logo img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      transition: transform 0.3s;
+    }
+
+    .logo img:hover {
+      transform: scale(1.1);
+    }
+
+    .form-container {
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      animation: fadeIn 2s ease-out;
+    }
+
+    .form-container h2 {
+      text-align: center;
+      font-size: 24px;
+      color: #e83e8c;
+      margin-bottom: 20px;
+    }
+
+    .form-container p {
+      font-size: 16px;
+      color: #495057;
+      line-height: 1.6;
+    }
+
+    .question {
+      margin: 20px 0;
+      font-size: 18px;
+      color: #343a40;
+      transition: background-color 0.3s ease;
+    }
+
+    .question:hover {
+      background-color: #f1f1f1;
+      padding: 10px;
+      border-radius: 8px;
+    }
+
+    .question input {
+      margin-right: 10px;
+    }
+
+    .btn-submit {
+      background-color: #e83e8c;
+      color: white;
+      padding: 12px 25px;
+      border: none;
+      border-radius: 8px;
+      font-size: 18px;
+      cursor: pointer;
+      width: 100%;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn-submit:hover {
+      background-color: #d6336c;
+    }
+
+    .question-container {
+      animation: fadeIn 2s ease-out;
+    }
+
+    /* Animation for fading in */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    /* Animation for sliding in */
+    @keyframes slideIn {
+      from {
+        transform: translateX(-100%);
+      }
+      to {
+        transform: translateX(0);
+      }
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .container {
+        width: 95%;
+      }
+
+      header h1 {
+        font-size: 28px;
+      }
+
+      header p {
+        font-size: 16px;
+      }
+
+      .form-container {
+        padding: 15px;
+      }
+
+      .btn-submit {
+        font-size: 16px;
+      }
+
+      .question {
+        font-size: 16px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .logo img {
+        width: 120px;
+        height: 120px;
+      }
+
+      header h1 {
+        font-size: 24px;
+      }
+
+      header p {
+        font-size: 14px;
+      }
+
+      .form-container h2 {
+        font-size: 20px;
+      }
+
+      .btn-submit {
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <header>
+      <h1>Formulaire d'Expérience Utilisateur</h1>
+      <p>Merci de remplir ce formulaire pour nous donner votre avis sur un site de divertissement (comme une plateforme de réservation d'activités, d'événements, ou de loisirs) que vous avez récemment utilisé. Vos réponses nous aideront à améliorer la navigation, la recherche d'informations, la réservation, et la performance générale du site. Votre opinion est essentielle pour nous permettre de rendre votre expérience plus simple et agréable. Merci pour votre participation !</p>
+    </header>
+
+    <div class="logo">
+      <img src="logo.jpg" alt="Logo" />
+    </div>
+
+    <div class="form-container">
+      <h2>Évaluez votre expérience :</h2>
+      
+      <div class="question-container">
+        <div class="question">
+          <label>1. Les menus sont faciles à naviguer sur le site.</label><br>
+          <input type="radio" name="question1" value="Vrai" required> Vrai
+          <input type="radio" name="question1" value="Faux"> Faux
+        </div>
+
+        <div class="question">
+          <label>2. Vous trouvez facilement ce que vous cherchez.</label><br>
+          <input type="radio" name="question2" value="Vrai" required> Vrai
+          <input type="radio" name="question2" value="Faux"> Faux
+        </div>
+
+        <div class="question">
+          <label>3. Les informations affichées (prix, durée, description) sont complètes.</label><br>
+          <input type="radio" name="question3" value="Vrai" required> Vrai
+          <input type="radio" name="question3" value="Faux"> Faux
+        </div>
+
+        <div class="question">
+          <label>4. Vous comprenez rapidement les conditions d’annulation.</label><br>
+          <input type="radio" name="question4" value="Vrai" required> Vrai
+          <input type="radio" name="question4" value="Faux"> Faux
+        </div>
+
+        <div class="question">
+          <label>5. Les images des activités correspondent à la réalité.</label><br>
+          <input type="radio" name="question5" value="Vrai" required> Vrai
+          <input type="radio" name="question5" value="Faux"> Faux
+        </div>
+
+        <div class="question">
+          <label>6. Les animations ne ralentissent pas le site.</label><br>
+          <input type="radio" name="question6" value="Vrai" required> Vrai
+          <input type="radio" name="question6" value="Faux"> Faux
+        </div>
+
+        <div class="question">
+          <label>7. La réservation est rapide et fluide.</label><br>
+          <input type="radio" name="question7" value="Vrai" required> Vrai
+          <input type="radio" name="question7" value="Faux"> Faux
+        </div>
+
+        <div class="question">
+          <label>8. Les moyens de paiement proposés sont suffisants.</label><br>
+          <input type="radio" name="question8" value="Vrai" required> Vrai
+          <input type="radio" name="question8" value="Faux"> Faux
+        </div>
+
+        <div class="question">
+          <label>9. Vous n'avez jamais rencontré d'erreurs techniques lors des paiements.</label><br>
+          <input type="radio" name="question9" value="Vrai" required> Vrai
+          <input type="radio" name="question9" value="Faux"> Faux
+        </div>
+
+        <div class="question">
+          <label>10. Vous appréciez recevoir des recommandations personnalisées.</label><br>
+          <input type="radio" name="question10" value="Vrai" required> Vrai
+          <input type="radio" name="question10" value="Faux"> Faux
+        </div>
+
+        <div class="question">
+          <label>11. Le site propose des promotions ou réductions intéressantes.</label><br>
+          <input type="radio" name="question11" value="Vrai" required> Vrai
+          <input type="radio" name="question11" value="Faux"> Faux
+        </div>
+
+        <div class="question">
+          <label>12. Vous trouvez le service client facilement accessible.</label><br>
+          <input type="radio" name="question12" value="Vrai" required> Vrai
+          <input type="radio" name="question12" value="Faux"> Faux
+        </div>
+
+        <div class="question">
+          <label>13. Le chat en direct est réactif et utile.</label><br>
+          <input type="radio" name="question13" value="Vrai" required> Vrai
+          <input type="radio" name="question13" value="Faux"> Faux
+        </div>
+
+        <div class="question">
+          <label>14. Les temps de chargement des pages sont satisfaisants.</label><br>
+          <input type="radio" name="question14" value="Vrai" required> Vrai
+          <input type="radio" name="question14" value="Faux"> Faux
+        </div>
+
+        <div class="question">
+          <label>15. Les activités pour familles/enfants sont bien mises en avant.</label><br>
+          <input type="radio" name="question15" value="Vrai" required> Vrai
+          <input type="radio" name="question15" value="Faux"> Faux
+        </div>
+
+        <button class="btn-submit" type="submit">Envoyer votre réponse</button>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
+
+
+
+  
+           
+
+
+
